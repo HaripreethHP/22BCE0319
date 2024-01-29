@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .hill{
+            position:relative;
+            width:100%;
+            height:100vh;
+            background:grey;
+        }
+        nav{
+            display:flex;
+            width:84%;
+            margin:auto;
+            padding:20px 0;
+            align-items:center;
+            justify-content:space-between;
+        }
+        nav ul li{
+            display:inline-block;
+            list-style:none;
+            margin:10px 20px;
+        }
+        nav ul li a{
+            text-decoration:none;
+            color:blue;
+            font-weight:bold;
+        }
+        nav ul li a:hover{
+            color:rgb(225, 43, 43);
+        }
+        .detel{
+            margin-left:8%;
+            margin-top:15%;
+        }
+        .detel h1{
+            font-size:50px;
+            color:black;
+            margin-bottom:20px;
+        }
+        span{
+            color:white;
+        }
+        .detel p{
+            color:white;
+            line-height:22px;
+        }
+        .detel a{
+            background:#212121;
+            padding:10px 18px;
+            text-decoration:none;
+            font-weight:bold;
+            color:white;
+            display:inline-block;
+            margin:30px 0;
+            border-radius:10px;
+        }
+        .images{
+            width:45%;
+            height:80%;
+            position:absolute;
+            bottom:0;
+            right:100px;
+        }
+        .images img{
+            height:100%;
+            position:absolute;
+            left:50%;
+            bottom:0;
+            transform:translateX(-50%);
+            transition:bottom 1s,left 1s;
+        }
+        .contacts h1{
+            font-size:50px;
+            color:white;
+            margin-bottom:20px;
+        }
+        .contacts{
+            margin-left:8%;
+            margin-top:15%;
+        }
+        .contacts p{
+            color:white;
+            line-height:22px;
+        }
+        .contacts a{
+            background:white;
+            padding:10px 18px;
+            text-decoration:none;
+            font-weight:bold;
+            color:#fff;
+            display:inline-block;
+            margin:30px 0;
+            border-radius:10px;
+        }
+        .home-sci{
+            position:absolute;
+            bottom:40px;
+            width:170px;
+            display:flex;
+            justify-content:space-between;
+        }
+        .home-sci a{
+            position:relative;
+            display:inline-flex;
+            justify-content:center;
+            align-items:center;
+            width:30px;
+            height:30px;
+            background:transparent;
+            border:2px solid black;
+            border-radius:50%;
+            font-size:20px;
+            color:red;
+            text-decoration:none;
+            z-index:1;
+            overflow:hidden;
+            transition:.5s;
+        }
+        .home-sci a::before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:black;
+            z-index:-1;
+            transition:.5s;
+        }
+        .home-sci a:hover::before{
+            width:100%;
+        }
+        .home-sci a:hover{
+            color:white;
+        }
+        #services{
+            padding: 30px 0;
+        }
+        .service-list{
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minimax(250px,1fr));
+            grid-gap:40px;
+            margin-top: 50px;
+        }
+    
+
+         .services-list div{
+            background:grey;
+            padding: 40px;
+            font-size: 13px;
+            font-weight: 300;
+            border-right: 10px;
+            transition: background 0.5s,transform 0.5s;
+
+}
+
+        .services-list div i{
+            font-size: 50px;
+            margin-bottom: 30px;
+
+}
+        .services-list div h2{
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 15px;
+}
+
+        .services-list div a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 12px;
+            margin-top: 20px;
+            display: inline-block;
+
+}
+
+        .services-list div:hover{
+            background: #ff004f;
+            transform: translate(-10px);
+}
+          </style>
+</head>
+<body>
+    <div class="hill">
+        <nav>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqiaIIzAj8I-lK67FHhjcpTnizNmmbmBiP-XLZNL2g-w&s"class="logo" style="height:30px;width:75px">
+            <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">CONTACTS</a></li>
+            </ul>
+        </nav>
+        <div class="detel">
+            <h1>I am <span>HariPreeth</span></h1>
+            <p>This is my portfolio done for web programming lab as a digital assignment
+            <br>
+            <br>
+            <div class="tab-titles">
+                <p color="red">Skills</p>
+                </div>
+                
+                <div class="tab-contents active-tab" id="skills">
+                
+                <ul>
+                
+                <li><span>UI/UX</span></li>
+                
+                <li><span>Web Development</span></li>
+                
+                <li><span>App Development</span></li>
+                </ul>
+                </div>
+                
+               
+        </p>
+        <a href="#">DOWNLOAD PORTFOLIO</a>
+        <br><br><br><br><div class="home-sci">
+            <a href="#"><i class='bx bxl-meta'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+            <br><a href="#"><i class='bx bxl-instagram'></i></a>
+        </div>
+        <div class="images">
+            <img src="" class="shape">
+            <img src=""  class="for">
+        </div>
+        <br><br><br><br><div class="home-sci">
+            <br><a href="#"><i class='bx bxl-meta'></i></a>
+            <br><a href="#"><i class='bx bxl-youtube'></i></a>
+            <br><a href="#"><i class='bx bxl-instagram'></i></a>
+        </div>
+        <div id="services">
+
+            <div class="container">
+            
+            <h1 class="sub-title">My Services</h1>
+            
+            <div class="services-list">
+            
+            <div>
+
+            
+            <h2>Web Design</h2>
+            
+            <p>web designing is the process of planning and implementing the plan for designing a website in a way that 
+                is functional and offers a good user experience. </p>
+            
+            <a href="#">learn more</a>
+            
+            </div> <div>
+            
+            <h2>UI/UX Design</h2>
+            
+            <p>In digital design,user interface refers to the interactivity,look, and feel of a product screen or web page.</p>
+            
+            <a href="#">learn more</a>
+            </div>
+
+            <div>
+                
+                <h2>App design</h2>
+                
+                <p>app design is an ongoin process of creating user experience and user interface elements for your application. </p>
+                
+                <a href="#">learn more</a>
+            </div>
+            </div>
+            </div>
+        </div>
+        <div class="contacts">
+            <h1>For more information contact</h1>
+            <p>Phone number:9345334745</p>
+            <p><a href="haripreethsds@gmail.com">Email</a></p>
+        </div>
+    </div>
+</body>
+</html>
